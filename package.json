@@ -1,0 +1,22 @@
+{
+  "name": "cosmoscli",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@azure/cosmos": "^3.7.2",
+    "@buzuli/json": "^2.1.0",
+    "fs-extra": "^9.0.1",
+    "immer": "^7.0.0",
+    "lodash": "^4.17.15",
+    "ora": "^4.0.4",
+    "rxjs": "^6.5.5",
+    "shelljs": "^0.8.4",
+    "vorpal": "^1.12.0"
+  }
+}
