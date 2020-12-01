@@ -23,12 +23,12 @@ class TypeClient {
 	constructor() {
 		this.DAO = new Dao({
 			secrets: {
-				endpoint: 'https://midtowndatabase.documents.azure.com:443/',
-				masterKey: 'PRMdPGKzBPvU8ypSleGMOhe7phqkdEsGERApSi8Mz2z88WEqzEoxeJ0Srv4miXyQb7H8kSItU51pMT6wiNBz0g==',
-				database: 'Midtown'
+				endpoint: 'xxx',
+				masterKey: 'xxx',
+				database: 'xxx'
 			},
-			databaseId: 'Midtown',
-			containerId: 'Development'
+			databaseId: 'xxx',
+			containerId: 'xxx'
 		});
 	}
 
@@ -37,7 +37,7 @@ class TypeClient {
 		return this.DAO.query({
 			query: 'SELECT * from c',
 			parameters: [],
-			partition: 'Midtown'
+			partition: 'xxx'
 		});
 	}
 
@@ -46,7 +46,7 @@ class TypeClient {
 		return this.DAO.query({
 			query: 'SELECT DISTINCT VALUE c.id from c order by c.id asc',
 			parameters: [],
-			partition: 'Midtown'
+			partition: 'xxx'
 		});
 	}
 
@@ -61,11 +61,11 @@ class TypeClient {
 					value: time
 				}
 			],
-			partition: 'Midtown'
+			partition: 'xxx'
 		});
 	}
 
-	async createType(name, definition, project = 'Midtown', src = undefined) {
+	async createType(name, definition, project = 'xxx', src = undefined) {
 		await this.DAO.init();
 		const response = await this.DAO.create({
 			id: name,
@@ -76,7 +76,7 @@ class TypeClient {
 		return response.resource;
 	}
 
-	async updateType(name, definition, project = 'Midtown') {
+	async updateType(name, definition, project = 'xxx') {
 		await this.DAO.init();
 		const response = await this.DAO.create({
 			id: name,
@@ -86,7 +86,7 @@ class TypeClient {
 		return response.resource;
 	}
 
-	async textQuery(query, project = 'Midtown') {
+	async textQuery(query, project = 'xxx') {
 		await this.DAO.init();
 		const response = await this.DAO.query({
 			query,
@@ -102,7 +102,7 @@ class TypeClient {
 		});
 	}
 
-	async dirtyTextQuery(query, project = 'Midtown') {
+	async dirtyTextQuery(query, project = 'xxx') {
 		await this.DAO.init();
 		const response = await this.DAO.query({
 			query,
